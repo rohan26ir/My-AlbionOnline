@@ -23,6 +23,7 @@ const Navbar = () => {
           </ul>
         </details>
       </li>
+      <li><NavLink to={'/MarketPrices'}>MarketPrices</NavLink></li>
       <li><NavLink to={'/contact'}>Contact</NavLink></li>
     </>
   );
@@ -44,7 +45,7 @@ const Navbar = () => {
           <Link to={'/'} className="btn btn-ghost text-xl">My AlbionOnline</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-5">
+          <ul className="menu menu-horizontal z-50 px-1 gap-5">
             {navbar}
           </ul>
         </div>

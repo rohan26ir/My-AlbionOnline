@@ -5,6 +5,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Error from "../Shared/Error/Error";
 import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home";
+import MarketPrices from "../Pages/MarketPrices/MarketPrices";
 
 const Router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const Router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path: "MarketPrices",
+        element: <MarketPrices></MarketPrices>
       }
     ]
   },
