@@ -2,31 +2,26 @@
   {
     "id": 1,
     "city": "Lymhurst",
-    "resource": ["Axe (T4)", "Wood (T4)", "Hide (T4)", "Stone (T2)"]
+    "resource": ["Axe (T4)", "Wood (T4)", "Hide (T3)", "Stone (T2)"]
   },
   {
     "id": 2,
     "city": "Bridgewatch",
-    "resource": ["Pickaxe (T4)", "Stone (T4)", "Hide (T4)", "Ore (T2)"]
+    "resource": ["Skinning Knife (T4)", "Hide (T4)", "Fiber (T3)", "Ore (T2)"]
   },
   {
     "id": 3,
     "city": "Fort Sterling",
-    "resource": ["Hammer (T4)", "Ore (T4)", "Stone (T4)", "Wood (T2)"]
+    "resource": ["Pick Axe (T4)", "Ore (T4)", "Stone (T3)", "Fiber (T2)"]
   },
   {
     "id": 4,
     "city": "Martlock",
-    "resource": ["Skinning Knife (T4)", "Hide (T4)", "Ore (T4)", "Fiber (T2)"]
+    "resource": ["Hammer (T4)", "Stone (T4)", "Ore (T3)", "Wood (T2)"]
   },
   {
     "id": 5,
     "city": "Thetford",
-    "resource": ["Sickle (T4)", "Fiber (T4)", "Wood (T4)", "Ore (T2)"]
-  },
-  {
-    "id": 6,
-    "city": "Caerleon",
-    "resource": ["All Resources (T4)", "Stone (T4)", "Ore (T4)", "Wood (T4)"]
+    "resource": ["Sickle (T4)", "Fiber (T4)", "Wood (T3)", "Hide (T2)"]
   }
 ]

@@ -28,12 +28,12 @@ const Footer = () => {
 
         <div className='mt-4'>
           <div className="grid grid-cols-3 gap-2 text-gray-400 text-sm mt-1">
-            <Link to="/bridgewatch" className="hover:text-white transition duration-300">Bridgewatch</Link>
-            <Link to="/martlock" className="hover:text-white transition duration-300">Martlock</Link>
-            <Link to="/thetford" className="hover:text-white transition duration-300">Thetford</Link>
-            <Link to="/fort-sterling" className="hover:text-white transition duration-300">Fort Sterling</Link>
-            <Link to="/lymhurst" className="hover:text-white transition duration-300">Lymhurst</Link>
-            <Link to="/caerleon" className="hover:text-white transition duration-300">Caerleon</Link>
+            <Link to="/bridgewatch" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Bridgewatch</Link>
+            <Link to="/martlock" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Martlock</Link>
+            <Link to="/thetford" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Thetford</Link>
+            <Link to="/fort-sterling" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Fort Sterling</Link>
+            <Link to="/lymhurst" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Lymhurst</Link>
+            <Link to="/caerleon" className="bg-rose-700 hover:bg-rose-600 px-2 py-1 rounded-sm hover:text-white transition duration-300">Caerleon</Link>
           
           </div>
         </div>

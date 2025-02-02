@@ -1,10 +1,15 @@
 import React from 'react';
 import WorldMap from './WorldMap';
 import OnlyMap from './OnlyMap';
+import HomeHero from './HomeHero';
 
 const Home = () => {
   return (
     <div>
+
+      <div>
+        <HomeHero></HomeHero>
+      </div>
       
 
 
