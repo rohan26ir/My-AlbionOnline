@@ -5,6 +5,7 @@ import HomeHero from "./HomeHero";
 import Newsletter from "./Newsletter";
 import HomeCard from "./HomeCard";
 import WaveTitles from "../../components/WaveTitles";
+import InGames from "./InGames";
 
 const Home = () => {
   return (
@@ -18,14 +19,30 @@ const Home = () => {
         <HomeCard></HomeCard>
       </div>
 
-      <div className=" flex flex-col md:flex-row justify-between gap-3  px-2 py-5">
-        <div className="w-[60%]">
-          <WorldMap></WorldMap>
-        </div>
-        <div className="w-[40%]  flex justify-center">
-          <OnlyMap></OnlyMap>
-        </div>
-      </div>
+      
+      <div className="flex flex-col md:flex-row justify-between gap-3 px-2 py-5">
+  {/* Title Section */}
+  <div className="flex items-center justify-center w-full md:w-auto  -ml-10">
+    <h2 className="text-2xl font-bold w-full md:w-[250px] text-center rotate-270 block py-2">
+      Optimal Resources <br /> by Royal City
+    </h2>
+  </div>
+
+  {/* World Map Section */}
+  <div className="w-[60%]">
+    <WorldMap />
+  </div>
+
+  {/* Only Map Section */}
+  <div className="w-[50%] flex justify-center">
+    <OnlyMap />
+  </div>
+</div>
+
+     <div>
+      <InGames></InGames>
+     </div>
+
 
       <div className="w-11/12 mx-auto">
         <Newsletter></Newsletter>
