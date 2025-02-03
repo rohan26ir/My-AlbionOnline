@@ -14,18 +14,9 @@ const WorldMap = () => {
     <div className="">
       {cities.map((city) => (
         <div key={city.id} className="my-1">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border-base-300 bg-base-200 border"
-          >
-            <div className="collapse-title text-xl  font-medium">
-              {city.city}
-            </div>
-            <div className="collapse-content">
-              <p className="space-x-5">
-                {city.resource.join(", ")}
-              </p>
-            </div>
+          <div className="bg-gray-400 px-6 py-2 rounded-lg">
+            <h2>{city.city}</h2>
+            <p>{city.resource.join(",  ")}</p>
           </div>
         </div>
       ))}
