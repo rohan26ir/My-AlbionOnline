@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signOut } from '@firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut } from '@firebase/auth';
 import React, { useState } from 'react';
 import { createContext } from 'react';
 
@@ -30,6 +30,15 @@ const Provider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   }
+
+  // sign in with google
+
+  const signInWithGoogle =()=>{
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  }
+
+  // sign in with
   
   
   const authInfo = {
@@ -41,7 +50,7 @@ const Provider = ({ children }) => {
 
 
   return (
-    <AuthContext.Provider  value={"authInfo"}>
+    <AuthContext.Provider  value={authInfo}>
       {children}
     </AuthContext.Provider>
   );
