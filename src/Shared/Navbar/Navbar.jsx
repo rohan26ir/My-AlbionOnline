@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { GiDesert, GiSwamp } from "react-icons/gi";
 import { MdForest, MdOutlineLandslide } from "react-icons/md";
@@ -7,6 +7,8 @@ import { Link, NavLink } from "react-router-dom";
 
 import ring from "../../assets/ring.webp";
 import avater from "../../assets/avater.webp";
+import { AuthContext } from "../../Provider/Provider";
+
 
 const colors = [
   "text-red-500",
@@ -18,6 +20,9 @@ const colors = [
 
 const Navbar = () => {
   const [colorIndex, setColorIndex] = useState(0);
+
+  const {user} = useContext(AuthContext);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -123,7 +128,10 @@ const Navbar = () => {
 
         {/* Right Side - Profile Dropdown */}
         <div className="navbar-end">
-          <div className="dropdown dropdown-end mr-3">
+          {
+            !user 
+            ? <Link to={'/signup'}><p className="px-2 py-1 bg-sky-500 rounded-md font-semibold">Create Account</p></Link>  
+            :<div className="dropdown dropdown-end mr-3">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar relative">
               {/* User Avatar */}
               <div className="w-20 h-20 rounded-full relative overflow-hidden">
@@ -156,6 +164,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          
+
+          }
         </div>
       </div>
     </div>
