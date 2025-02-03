@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import MarketPrices from "../Pages/MarketPrices/MarketPrices";
 import LogIn from "../Account/LogIn/LogIn";
 import CreateUser from "../Account/CreateUser/CreateUser";
+import PrivateRoute from "./PrivateRoute";
 
 export const Router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const Router = createBrowserRouter([
       },
       {
         path: "/MarketPrices",
-        element: <MarketPrices></MarketPrices>
+        element: <PrivateRoute><MarketPrices></MarketPrices></PrivateRoute>
       },
       {
         path: "/signin",
