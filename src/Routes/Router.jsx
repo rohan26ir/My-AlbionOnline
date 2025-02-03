@@ -7,7 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home";
 import MarketPrices from "../Pages/MarketPrices/MarketPrices";
 
-const Router = createBrowserRouter([
+export const Router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
@@ -29,4 +29,3 @@ const Router = createBrowserRouter([
   },
 ]);
 
-export default Router;
