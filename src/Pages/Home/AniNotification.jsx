@@ -84,7 +84,7 @@ const AniNotification = () => {
 
   return (
     <div>
-      <div className='h-96 bg-white shadow-2xl mx-24 rounded-2xl flex items-center overflow-hidden'>
+      <div className='h-96 bg-gray-300 shadow-lg mx-24 rounded-2xl flex items-center overflow-hidden'>
         <div className='w-80 mx-auto flex flex-col gap-1 mt-auto pb-4'>
           <AnimatePresence>
             {items.map((data, index) => (
