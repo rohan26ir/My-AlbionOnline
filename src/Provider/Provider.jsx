@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, deleteUser, getAuth, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
 import { app } from "../firebase/firebase.config";
 
@@ -34,11 +34,28 @@ const Provider = ({ children }) => {
         displayName: name, photoURL: photo
       });
     }
+
+    // Send a user a verification email
+    const sendverifimail = () => {
+      return sendEmailVerification(auth.currentUser)
+    }
+
+    // Send a password reset email
+    const psaaResetmail =()=> {
+      return sendPasswordResetEmail(auth, email)
+    }
+
     
     // google
     const googleSignIn = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
+    }
+
+
+    // Delete a user
+    const delUser = () =>{
+      return deleteUser(user)
     }
 
 
@@ -62,7 +79,10 @@ const Provider = ({ children }) => {
         logOut,
         googleSignIn,
         updateuserProfile,
-        
+        sendverifimail,
+        psaaResetmail,
+        delUser
+
     }
 
     return (
