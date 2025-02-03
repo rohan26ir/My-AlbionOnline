@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider } from '@firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword } from '@firebase/auth';
 import React, { useState } from 'react';
 import { createContext } from 'react';
 
@@ -20,9 +20,16 @@ const Provider = ({ children }) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email , password)
   }
+
+  const signin = (email , password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password)
+  }
   
   
   const authInfo = {
+    createUser,
+    signin,
   
   }
 
