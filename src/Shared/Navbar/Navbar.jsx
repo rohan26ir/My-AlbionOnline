@@ -130,7 +130,7 @@ const Navbar = () => {
         <div className="navbar-end">
           {
             !user 
-            ? <Link to={'/signup'}><p className="px-2 py-1 bg-sky-500 rounded-md font-semibold">Create Account</p></Link>  
+            ? <Link to={'/signup'}><p className="px-2 py-1 bg-sky-500 rounded-md font-semibold  ">Create Account</p></Link>  
             :<div className="dropdown dropdown-end mr-3">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar relative">
               {/* User Avatar */}

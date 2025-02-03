@@ -3,8 +3,8 @@ import Loading from '../../components/Loading';
 
 const Contact = () => {
   return (
-    <div>
-      <Loading></Loading>
+    <div className='min-h-screen'>
+      
     </div>
   );
 };
