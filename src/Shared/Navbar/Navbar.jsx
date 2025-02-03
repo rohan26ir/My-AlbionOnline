@@ -21,7 +21,11 @@ const colors = [
 const Navbar = () => {
   const [colorIndex, setColorIndex] = useState(0);
 
-  const {user} = useContext(AuthContext);
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+  }
 
 
   useEffect(() => {
@@ -160,7 +164,7 @@ const Navbar = () => {
                 <a>Settings</a>
               </li>
               <li>
-                <a>Logout</a>
+                <p onClick={handleLogOut}>Logout</p>
               </li>
             </ul>
           </div>

@@ -10,7 +10,10 @@ const SocialAccound = () => {
 
   const handleSignIn = () => {
     googleSignIn()
-     `${user && navigate('/')}`
+    
+    .then(() => {
+      navigate("/"); // Navigate to the home page
+    })
   }
 
   return (
