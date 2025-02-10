@@ -23,6 +23,8 @@ const Navbar = () => {
 
   const {user, logOut} = useContext(AuthContext);
 
+  // console.log("user", user);
+
   const handleLogOut = () =>{
     logOut()
   }
@@ -138,11 +140,11 @@ const Navbar = () => {
             :<div className="dropdown dropdown-end mr-3">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar relative">
               {/* User Avatar */}
-              <div className="w-20 h-20 rounded-full relative overflow-hidden">
+              <div className="w-10 h-10 relative overflow-hidden object-contain">
                 <img
                   alt="User Avatar"
-                  src={avater}
-                  className="w-full h-full object-cover"
+                  src={user.photoURL}
+                  className="w-full h-full object-contain"
                 />
               </div>
               {/* Ring Overlay */}
@@ -156,12 +158,19 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">
-                  Profile <span className="badge">New</span>
-                </a>
+              <Link to={'/Profile'} className="justify-between">
+                  Profile <span className="badge text-red-600">Lock</span>
+                </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link to={'/AdminBoard'} className="justify-between">
+                  Admin 
+                </Link>
+              </li>
+              <li>
+                <Link to={'/ProfileSetting'} className="justify-between">
+                  Setting 
+                </Link>
               </li>
               <li>
                 <p onClick={handleLogOut}>Logout</p>
